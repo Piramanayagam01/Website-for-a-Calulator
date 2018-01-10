@@ -1,16 +1,73 @@
+<!DOCTYPE html>
 <html>
-  <title>
-    first website
-    </title>
-  <body>
-    <h1>My First Heading</h1>
-    </body>
- <style>
-   body 
-   {
-     background-color:green;
-     color:#fff;
-     text-align:center;
-   }
-   </style>
+    <head>
+<title>lab exercise</title>
+<style>
+    body{
+    background-color:  #f5f5f5;;
+    color: black;
+    text-align: center;
+    margin-top: 175px;
+}
+
+h1{
+    color: rgb(33, 1, 216);
+}
+
+span{
+    color: red;
+}
+
+#summary{
+    width: 30%;
+    margin: 10px auto;
+    border: black 1px solid;
+    background-color: #00B294;
+}
+
+section{
+    border: black 1px solid;
+    width: 40%;
+    margin: 10px auto;
+    color: black;
+    background-color:#00B294
+}
+</style>
+    </head>
+<body>       
+<h1 id=greeting> Welcome to fun with numbers</h1>
+<p id="summary"> operand #1:<span id ="operand#1">___</span>  operand #2:<span id="operand#2">___</span></p>
+<section>
+<p id="addition"></p>
+<p id="subtraction"></p>
+<p id="multiplication"></p>
+<p id="division"></p>
+<p id="modulus"></p>
+</section>
+<script>
+var username = window.prompt("Enter your name");
+var gp = document.getElementById("greeting");
+gp.innerHTML +="  ," + username;
+
+var num1 = parseInt(window.prompt("Enter the first number "));
+var num2 = parseInt(window.prompt("Enter a second number "));
+var span1 = document.getElementById("operand#1");
+var span2 = document.getElementById("operand#2"); 
+span1.innerHTML = num1;
+span2.innerHTML = num2;
+
+
+var sum = num1 + num2;
+var difference = num1 - num2;
+var product = num1 * num2;
+var quotient = num1 / num2;
+var modResult = num1 % num2;
+
+
+var resultMessage = "<span>" + num1 + "</span> and <span>" + num2 + "</span> is "; 
+document.getElementById("addition").innerHTML = "The sum of " + resultMessage + sum; document.getElementById("subtraction").innerHTML = "The difference between " + resultMessage + difference;
+document.getElementById("multiplication").innerHTML = "The product of " + resultMessage + product; document.getElementById("division").innerHTML = "The quotient of " + resultMessage + quotient; document.getElementById("modulus").innerHTML = "The result of the mod operation on " + resultMessage + modResult;
+</script>
+</body>
 </html>
+
